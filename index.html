@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			color: #000;
+			font-family: Verdana, Arial, Helvetica;
+			font-size: 12px;
+			line-height: 120%;
+			font-weight: normal;
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		body {
+			//background-color: #73712d;
+		}
+
+		.bg {
+			text-align: center;
+			clear: both;
+		}
+
+		.box {
+			margin: 5px;
+			text-align: left;
+		}
+
+		.yaku_all {
+			margin: 0 auto;
+			text-align: left;
+			color: #000;
+			font-size: 24px;
+		}
+
+		.yaku {
+			padding: 10px;
+			color: #000;
+			background-color: #C6BC71;
+		}
+		
+		.alt {
+			background-color: #E2D88D !important;
+		}
+		
+		.y_closed_hand {
+			background-color: #FCD4D1;
+		}
+		
+		.y_sequences {
+			background-color: #DFCCE4;
+		}
+
+		.topic {
+			padding: 4px;
+			font-weight: bold;
+			text-align: left;
+			color: #fff;
+			background-color: #73712d;
+		}
+		
+		.han {
+			font-weight: bold;
+			text-align: right;
+			color: #fff;
+			position: relative;
+			top: -25px;
+			width: 100%;
+		}
+
+		.feature {
+			color: #444;
+			padding: 10px;
+			text-align: left;
+		}
+
+		.pai {
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.closed_hand {
+			background-color: 94070A !important;
+		}
+		
+		.padding_left {
+			padding-left: 60px !important;
+		}
+		
+		.heading {
+			font-size: 20px;
+			padding-top: 15px;
+		}	
+
+		.heading::before {
+			content: '\02795';
+		}
+
+		.jap_name {
+			font-size: 8px;
+			color: white;
+
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+		.panel {
+			display: block;
+		}
+
+		.active {
+			background-color: #ccc;
+		}
+
+		.active::before {
+			content: '\2796';
+		}
+
+		p {
+			font-size: 20px;
+		}
+
+	</style>
+</head>
+
+<body>
+
+<!--start yaku-->
+<div class="bg">
+	<div class="box">
+		<div class="heading"> Mão Fechada</div>
+		<div class="panel">
+			<div class="yaku">
+			<div class="topic closed_hand">Declarar Mão Pronta <span class="jap_name">• RIICHI</span><div class="han">1 Han</div></div>		
+			<div class="feature"><p>Aposta de 1.000 pontos. A mão não pode ser alterada. Descarte pedras compradas do muro a menos que você vença.</p></div>
+			</div>
+			
+			<div class="yaku padding_left">
+			<div class="topic closed_hand">↪ Bater até o Próximo Turno <span class="jap_name">• IPPATSU</span><div class="han">+1 Han</div></div>		
+			<div class="feature"><p>Vitória até o próximo turno após declarar Riichi. Invalidado por captura de descarte.</p></div>
+			</div>
+			
+			<div class="yaku padding_left">
+			<div class="topic closed_hand">↪ Duplo <span class="jap_name">• DABURU RIICHI</span><div class="han">+1 Han</div></div>		
+			<div class="feature"><p>Declaração de Riichi no primeiro turno da rodada. Invalidado por captura de descarte feita antes da declaração do Riichi.</p></div>
+			</div>
+			
+			<div class="yaku alt">
+			<div class="topic closed_hand">Mão Totalmente Fechada <span class="jap_name">• MENZEN TSUMO</span><div class="han">1 Han</div></div>		
+			<div class="feature"><p>Mão fechada e vitória por compra do muro (Tsumo).</p></div>
+			</div>
+		</div>
+		
+		<div class="heading"> Sequências</div>
+		<div class="panel">
+			<div class="yaku">
+			<div class="topic closed_hand">Apenas Sequências <span class="jap_name">• PINFU</span><div class="han">1 Han</div></div>		
+			<div class="feature"><p>Apenas sequências, um par sem valor e espera dupla. Uma mão que vale 0 Fu além dos 20 Fu base (ou 30 Fu no caso de um ron fechado).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_pinfu.gif"  ></div>
+			</div>		
+			
+			<div class="yaku alt">
+			<div class="topic closed_hand">Sequências Gêmeas <span class="jap_name">• IIPEIKOU</span><div class="han">1 Han</div></div>		
+			<div class="feature"><p>Duas sequências idênticas no mesmo naipe.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_iipei.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt padding_left">
+			<div class="topic closed_hand">↪ Par de Sequências Gêmeas <span class="jap_name">• RYANPEIKOU</span><div class="han">3 Han</div></div>		
+			<div class="feature"><p>Par de duas sequências idênticas. Podem ser de naipes diferentes.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_ryanpei.gif"  ></div>
+			</div>
+			
+			<div class="yaku">
+			<div class="topic">Sequência Tripla Mista <span class="jap_name">• SANSHIKI</span><div class="han">2 Han<br/>(ou 1 Han se mão aberta)</div></div>		
+			<div class="feature"><p>A mesma sequência em cada naipe.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_sanshoku.gif"  ></div>
+			</div>
+
+			<div class="yaku alt">
+			<div class="topic">Sequência Direta Pura <span class="jap_name">• ITTSUU</span><div class="han">2 Han<br/>(ou 1 Han se mão aberta)</div></div>		
+			<div class="feature"><p>As sequências 123, 456 e 789 de um mesmo naipe.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_ittu.gif"  ></div>
+			</div>
+		</div>
+
+		<div class="heading"> Trincas/Quadras</div>
+		<div class="panel">
+			<div class="yaku">
+			<div class="topic">Trinca de Honra com Valor <span class="jap_name">• YAKUHAI</span><div class="han">1 Han<br/>por cada trinca/quadra</div></div>
+			<div class="feature"><p>Uma trinca ou quadra de Dragões, Vento da Rodada ou Vento do Jogador.</p></div>
+			</div>
+			
+			<div class="yaku alt">
+			<div class="topic">Três Pequenos Dragões <span class="jap_name">• SHOUSANGEN</span><div class="han">2 Han<br/>(considerar como mínimo de 4 Han)</div></div>
+			<div class="feature"><p>Dois grupos de dragões e um par do terceiro dragão.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_shosan.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt padding_left">
+			<div class="topic">↪ Três Grandes Dragões <span class="jap_name">• DAISANGEN</span><div class="han">★</div></div>
+			<div class="feature"><p>Três grupos de dragões.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_daisan.gif"  ></div>
+			</div>
+
+			<div class="yaku">
+			<div class="topic">Quatro Pequenos Ventos <span class="jap_name">• SHOUSUUSHII</span><div class="han">★</div></div>
+			<div class="feature"><p>Três grupos de ventos e um par do quarto vento.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_shosu.gif"  ></div>
+			</div>
+
+			<div class="yaku padding_left">
+			<div class="topic">↪ Quatro Grandes Ventos <span class="jap_name">• DAISUUSHII</span><div class="han">★★</div></div>
+			<div class="feature"><p>Quatro grupos de ventos.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_daisu.gif"  ></div>
+			</div>
+
+			<div class="yaku alt">
+			<div class="topic">Apenas Trincas <span class="jap_name">• TOITOI</span><div class="han">2 Han</div></div>
+			<div class="feature"><p>Somente trincas ou quadras (sem sequências).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_toitoi.gif"  ></div>
+			</div>
+
+			<div class="yaku">
+			<div class="topic">Três Trincas Ocultas <span class="jap_name">• SANANKOU</span><div class="han">2 Han</div></div>
+			<div class="feature"><p>Três trincas ou quadras ocultas. O resto da mão pode ser exposto.</p></div>
+			</div>
+			
+			<div class="yaku padding_left">
+			<div class="topic closed_hand">↪ Quatro Trincas Ocultas <span class="jap_name">• SUUANKOU</span><div class="han">★<br/>(+★ se a espera for pelo par)</div></div>
+			<div class="feature"><p>Quatro trincas ou quadras ocultas.</p></div>
+			</div>
+			
+			<div class="yaku alt">
+			<div class="topic">Trinca Tripla Mista <span class="jap_name">• SANSHOKU DOUKOU</span><div class="han">2 Han</div></div>
+			<div class="feature"><p>Um grupo de mesmo número em cada naipe.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_sandopon.gif"  ></div>
+			</div>
+
+			<div class="yaku">
+			<div class="topic">Três Quadras <span class="jap_name">• SANKANTSU</span><div class="han">2 Han</div></div>
+			<div class="feature"><p>Três quadras (ocultas ou expostas).</p></div>
+			</div>
+			
+			<div class="yaku padding_left">
+			<div class="topic">↪ Quatro Quadras <span class="jap_name">• SUUKANTSU</span><div class="han">★</div></div>
+			<div class="feature"><p>Quatro quadras (ocultas ou expostas).</p></div>
+			</div>
+		</div>
+		
+		<div class="heading"> Terminais/Honras</div>
+		<div class="panel">
+			<div class="yaku">
+			<div class="topic">Apenas Simples <span class="jap_name">• TANYAO</span><div class="han">1 Han</div></div>
+			<div class="feature"><p>Somente pedras 2 até 8 de qualquer naipe. (Sem 1, 9 ou honras.)</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_tanyao.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt">
+			<div class="topic">Mão Semi Lateral <span class="jap_name">• CHANTA</span><div class="han">2 Han<br/>(ou 1 Han se mão aberta)</div></div>
+			<div class="feature"><p>Cada grupo e par contém 1, 9 ou honra.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_chanta.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt padding_left">
+			<div class="topic">↪ Mão Totalmente Lateral <span class="jap_name">• JUNCHAN</span><div class="han">3 Han<br/>(ou 2 Han se mão aberta)</div></div>
+			<div class="feature"><p>Cada grupo e par contém 1 ou 9 (sem honras).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_junchan.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt padding_left">
+			<div class="topic">↪ Apenas Terminais e Honras <span class="jap_name">• HONROUTOU</span><div class="han">2 Han<br/>(considerar como mínimo de 4 Han)</div></div>
+			<div class="feature"><p>Cada grupo e par contém apenas 1, 9 ou honra (sem pedras de 2 a 8).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_honro.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt padding_left">
+			<div class="topic">↪ Apenas Terminais <span class="jap_name">• CHINROUTOU</span><div class="han">★</div></div>
+			<div class="feature"><p>Cada grupo e par contém apenas 1 ou 9 (sem pedras de 2 a 8 ou honras).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_chiro.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt padding_left">
+			<div class="topic">↪ Apenas Honras <span class="jap_name">• TSUUIISOU</span><div class="han">★</div></div>
+			<div class="feature"><p>Cada grupo e par contém apenas honras (sem pedras numeradas).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_tuiiso.gif"  ></div>
+			</div>
+		</div>
+				
+		<div class="heading"> Mesmo Naipe</div>
+		<div class="panel">
+			<div class="yaku">
+			<div class="topic">Meio Flush <span class="jap_name">• HONITSU</span><div class="han">3 Han<br/>(ou 2 Han se mão aberta)</div></div>
+			<div class="feature"><p>Somente pedras de um mesmo naipe e honras.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_honitu.gif"  ></div>
+			</div>
+			
+			<div class="yaku padding_left">
+			<div class="topic">↪ Flush Completo <span class="jap_name">• CHINITSU</span><div class="han">6 Han<br/>(ou 5 Han se mão aberta)</div></div>
+			<div class="feature"><p>Somente pedras de um mesmo naipe (sem honras).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_chinitu.gif"  ></div>
+			</div>
+			
+			<div class="yaku padding_left">
+			<div class="topic closed_hand">↪ Nove Portões <span class="jap_name">• CHUUREN POUTOU</span><div class="han">★<br/>(+★ se a espera for por 9 tipos de pedras)</div></div>
+			<div class="feature"><p>1112345678999 de um naipe e uma pedra extra do mesmo naipe.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_churen.gif"  ></div>
+			</div>
+		</div>
+		
+		<div class="heading"> Situacionais</div>
+		<div class="panel">
+			<div class="yaku">
+			<div class="topic">Sob o Mar/Rio <span class="jap_name">• HAITEI RAOYUE / HOUTEI RAOYUI</span><div class="han">1 Han</div></div>
+			<div class="feature"><p>Vitória com última pedra do muro ou último descarte.</p></div>
+			</div>
+			
+			<div class="yaku alt">
+			<div class="topic closed_hand">Benção do Céu/da Terra <span class="jap_name">• TENHOU / CHIIHOU</span><div class="han">★</div></div>
+			<div class="feature"><p>Vitória com a primeira pedra comprada. Invalidado por captura de descarte.</p></div>
+			</div>
+			
+			<div class="yaku">
+			<div class="topic">Bater Após uma Quadra <span class="jap_name">• RINSHAN KAIHOU</span><div class="han">1 Han</div></div>
+			<div class="feature"><p>Vitória com pedra comprada do muro morto após formar uma quadra.</p></div>
+			</div>
+			
+			<div class="yaku alt">
+			<div class="topic">Roubo de Quadra <span class="jap_name">• CHANKAN</span><div class="han">1 Han</div></div>
+			<div class="feature"><p>Vitória com pedra roubada de oponente que tenta atualizar uma trinca exposta em quadra.</p></div>
+			</div>
+		</div>
+		
+		<div class="heading"> Irregulares</div>
+		<div class="panel">
+			<div class="yaku">
+			<div class="topic closed_hand">7 Pares <span class="jap_name">• CHIITOITSU</span><div class="han">2 Han</div></div>
+			<div class="feature"><p>Sete pares diferentes (não pode haver dois pares de pedras iguais).</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_chitoi.gif"  ></div>
+			</div>
+			
+			<div class="yaku alt">
+			<div class="topic closed_hand">Treze Órfãos <span class="jap_name">• KOKUSHI MUSOU</span><div class="han">★<br/>(+★ se a espera for pelo par)</div></div>
+			<div class="feature"><p>Cada terminal e cada honra e a 14ª pedra deve ser uma duplicata de qualquer terminal ou honra.</p></div>
+			<div class="pai"><img src="https://www.gamedesign.jp/flash/mahjong/yaku_kokusi.gif"  ></div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!--end yaku-->
+
+<script>
+	var acc = document.getElementsByClassName("heading");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+
+			var panel = this.nextElementSibling;
+
+			
+				if (panel.style.display === "block") {
+					setTimeout(function() {
+						panel.style.display = "none";
+					}
+					, 10);
+				} else {
+					panel.style.display = "block";
+				}
+			
+		});
+	}
+
+	setTimeout(function(){ 
+		var panels = document.getElementsByClassName("panel");
+		for (i = 0; i < panels.length; i++) {
+			panels[i].style.display = "none";
+		}
+	}
+	, 10);
+</script>
+
+</body>
+</html>
